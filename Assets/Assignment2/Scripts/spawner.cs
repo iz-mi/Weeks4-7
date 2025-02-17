@@ -5,10 +5,11 @@ using UnityEngine;
 public class spawner : MonoBehaviour
 {
     public GameObject bubblePrefab;
-    public Vector2 spawnXY = new Vector2(10f, 10f);
 
-    //float spawnX = Random.Range();
-    //float spawnY = Random.Range();
+    //create minimum and maximum x/y values for random spawn positions
+    public Vector2 spawnX = new Vector2(-10f, 10f);
+    public Vector2 spawnY = new Vector2(-10f, 10f);
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,15 +17,21 @@ public class spawner : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            //spawnX = Math.Random()
-            //spawnY = Math.Random()
-            Vector2 mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Instantiate(bubblePrefab, mouse, Quaternion.identity);
-            //Instantiate(bubblePrefab);
-        }
+
+    }
+
+    public void spawnBubbleButton()
+    {
+        //create a random xy coordinate to spawn on
+        float randomX = Random.Range(spawnX.x, spawnX.y);
+        float randomY = Random.Range(spawnY.x, spawnY.y);
+
+        //set this random xy coordinate to var randomPosition so we can spawn it with an instantiate
+        Vector2 randomPosition = new Vector2(randomX, randomY);
+
+        //instantiate a copy of the prefab at generated random position
+        Instantiate(bubblePrefab, randomPosition, Quaternion.identity);
     }
 }
