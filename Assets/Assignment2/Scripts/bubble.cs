@@ -7,7 +7,7 @@ public class bubble : MonoBehaviour
     //set up timer before bubble pops by itself
     public float popTime = 3f;
     
-    //set up bubble movement
+    //set up bubble movement speed
     float speed =  2;
 
     // Update is called once per frame
