@@ -3,7 +3,9 @@ guid: c0058a0c998c023449308dc58bd12324
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bubblePrefab: {fileID: 5232819472198335279, guid: aa4543bbea45c3a46bbb1b8bcfa0f412, type: 3}
+  - bubbleSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

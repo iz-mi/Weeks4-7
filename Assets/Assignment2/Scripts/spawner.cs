@@ -7,6 +7,14 @@ public class spawner : MonoBehaviour
 {
     public GameObject bubblePrefab;
     public float bubbleSize;
+    public Slider bubbleSlider;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        //make sure the soap volume slider is always set to 100% at the start of runtime
+        bubbleSlider.value = 1f;
+    }
 
     //create minimum and maximum xy values for random spawn positions
     public Vector2 spawnX = new Vector2(0, 1);
