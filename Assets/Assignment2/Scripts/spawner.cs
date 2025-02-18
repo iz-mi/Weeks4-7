@@ -12,7 +12,7 @@ public class spawner : MonoBehaviour
     public Vector2 spawnX = new Vector2(0, 1);
     public Vector2 spawnY = new Vector2(0, 1);
 
-    // set slider function to update bubble size (min 0.1
+    //set slider function to update bubble size
     public void UpdateBubbleSize(float newSize)
     {
         bubbleSize = newSize;
