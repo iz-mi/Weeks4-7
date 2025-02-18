@@ -8,7 +8,7 @@ public class bubble : MonoBehaviour
     public float popTime = 3f;
     
     //set up bubble movement
-    public float speed =  3;
+    float speed =  2;
 
     // Update is called once per frame
     void Update()
